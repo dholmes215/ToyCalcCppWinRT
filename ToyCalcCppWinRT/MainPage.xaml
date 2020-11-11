@@ -7,7 +7,38 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="ClickHandler">Click Me</Button>
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <TextBlock x:Name="display" Text="0" HorizontalAlignment="Stretch" TextWrapping="NoWrap" TextAlignment="End" FontSize="48"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition MinHeight="50"/>
+                <RowDefinition MinHeight="50"/>
+                <RowDefinition MinHeight="50"/>
+                <RowDefinition MinHeight="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="50"/>
+                <ColumnDefinition MinWidth="50"/>
+                <ColumnDefinition MinWidth="50"/>
+                <ColumnDefinition MinWidth="50"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="digit0" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Click="digit0_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="32">0</Button>
+            <Button x:Name="digit1" Grid.Row="2" Grid.Column="0" Click="digit1_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="32">1</Button>
+            <Button x:Name="digit2" Grid.Row="2" Grid.Column="1" Click="digit2_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="32">2</Button>
+            <Button x:Name="digit3" Grid.Row="2" Grid.Column="2" Click="digit3_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="32">3</Button>
+            <Button x:Name="digit4" Grid.Row="1" Grid.Column="0" Click="digit4_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="32">4</Button>
+            <Button x:Name="digit5" Grid.Row="1" Grid.Column="1" Click="digit5_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="32">5</Button>
+            <Button x:Name="digit6" Grid.Row="1" Grid.Column="2" Click="digit6_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="32">6</Button>
+            <Button x:Name="digit7" Grid.Row="0" Grid.Column="0" Click="digit7_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="32">7</Button>
+            <Button x:Name="digit8" Grid.Row="0" Grid.Column="1" Click="digit8_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="32">8</Button>
+            <Button x:Name="digit9" Grid.Row="0" Grid.Column="2" Click="digit9_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="32">9</Button>
+
+            <Button x:Name="add" Grid.Row="0" Grid.Column="3" Click="add_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="32">+</Button>
+            <Button x:Name="sub" Grid.Row="1" Grid.Column="3" Click="sub_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="32">-</Button>
+            <Button x:Name="mul" Grid.Row="2" Grid.Column="3" Click="mul_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="32">*</Button>
+            <Button x:Name="div" Grid.Row="3" Grid.Column="3" Click="div_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="32">/</Button>
+            <Button x:Name="eq" Grid.Row="3" Grid.Column="2" Click="eq_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="32">=</Button>
+        </Grid>
     </StackPanel>
 </Page>
